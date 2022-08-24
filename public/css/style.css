@@ -1,0 +1,165 @@
+
+
+header{
+    background: #CB0E00;
+    height: 5rem;
+
+}
+
+.icon-icon{
+    font-size: 25px;
+}
+
+.active {background-color: #CB0E00 !important;}
+
+
+
+
+.dot{
+    height: 18px;
+    width: 18px;
+
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.dot-1{
+    height: 20px;
+    width: 50px;
+
+    border-radius: 25px;
+    display: inline-block;
+}
+
+
+
+.leadReportGraph {
+    width: 45rem;
+    height: 12rem
+}
+@media screen and (max-width:991px ) {
+    .leadReportGraph {
+        width: 35rem;
+        height: 14rem
+    }
+}
+
+
+
+@media screen and (max-width:991px ) {
+    .Target {
+        width: 20rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width:1024px ) {
+    .Target {
+        width: 23rem;
+
+    }
+}
+
+.barChart2{
+    width: 45rem;
+    height: 12.9rem;
+}
+
+@media screen and (max-width:991px ) {
+    .barChart2 {
+        width: 34rem;
+        height: 15rem;
+    }
+}
+
+.navbar-toggler{
+
+    margin-top: 20px;
+    margin-left: 15px;
+    border: solid blanchedalmond;
+    size: 10px;
+    background-color: #90a4ae;
+
+}
+
+/*table data*/
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+    background-color:#F4E9E9;
+    /*border-radius: 5px;*/
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+.table-striped>tbody>tr:nth-child(even)>td {
+    background-color: #FFFFFF;
+    /*border-radius: 5px;*/
+    padding: 20px;
+    font-size: 14px;
+
+}
+
+/*table head*/
+
+.table-striped>thead>tr:nth-child(odd)>th {
+    background-color:#F6B301;
+    /*border-radius: 5px;*/
+    padding: 20px;
+    font-size: 14px;
+
+}
+
+.font-style{
+    font-family:'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+
+}
+
+.font-style-page{
+    font-family:'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+
+
+}
+@media screen and (min-width: 1401px ) {
+    .menubar{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 1201px ) {
+    .menubar1{
+        display: none;
+        visibility: hidden;
+    }
+
+
+    @media (max-width: 3000px) {
+        .hide-3000-up {
+            margin-top: 27%;
+            margin-bottom: 27%;
+
+        }
+    }
+
+    @media (min-width: 1399px) {
+        .hide-1399-up {
+            margin-top: 26%;
+            margin-bottom: 27%;
+
+        }
+    }
+
+
+
+
+
+
+}
+
