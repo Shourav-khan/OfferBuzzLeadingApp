@@ -20,7 +20,7 @@
                             <ol class="breadcrumb">
 
 
-                                <a href="/project/lead/details" class="bi bi-arrow-left fs-2 text-black d-md-none d-lg-none d-xl-block"></a>
+                                <a href="#" class="bi bi-arrow-left fs-2 text-black d-md-none d-lg-none d-xl-block"></a>
 
 
                                 <div class="row mt-2 mx-5">

@@ -45,11 +45,11 @@
 
 
                     <div class=" row my-2" >
-                        <div class="col-xxl-12 col-md-12 col-lg-12 pe-xxl-4">
+                        <div class="table-responsive-xl table-responsive-xxl" >
 
-                            <table class="table table-striped table-borderless table-curved border" >
+                            <table class="table  table-striped table-borderless table-curved border" >
                                 <thead class="thead">
-                                <tr class="text-center">
+                                <tr class="text-center ">
                                     <th scope="col">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input"
@@ -119,15 +119,15 @@
                                         <form action="{{route('companies.destroy',$company->id)}}" method="POST">
 
 
-                                        <div class="row justify-content-around">
-                                            <div class="col-3">
-                                                <a href="{{route("companies.show",['company'=>$company])}}" class="text-black text-decoration-none">View</a>
+                                        <div class="row justify-content-between">
+                                            <div class="">
+                                                <a href="{{route("companies.show",['company'=>$company])}}" class="text-black btn btn-success">View</a>
                                             </div>
 
 
 
-                                            <div class="col-3 ">
-                                                <a href="{{route("companies.edit",['company'=>$company])}}" class="text-black text-decoration-none">Edit</a>
+                                            <div class=" my-2 ">
+                                                <a href="{{route("companies.edit",['company'=>$company])}}" class="text-black btn btn-primary ">Edit</a>
                                             </div>
 
 
@@ -135,8 +135,8 @@
                                             @method('DELETE')
 
 
-                                            <div class="col-3">
-                                                <button  type="submit" class="text-black ">Delete</button>
+                                            <div class="">
+                                                <button  type="submit" class="text-black btn btn-danger">Delete</button>
                                             </div>
 
 

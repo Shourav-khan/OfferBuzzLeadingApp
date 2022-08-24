@@ -36,7 +36,7 @@
                         <div class="container-fluid bg-white w-50">
                             <div class="col-xxl-12 ">
 
-                                <form action="{{route('store.all.lead')}}" method="POST"  class="row g-3 container-fluid" >
+                                <form action="#" method="POST"  class="row g-3 container-fluid" >
                                     @csrf
 
                                     @if($leadInfo)
@@ -96,7 +96,11 @@
 {{--                                    </div>--}}
                                     @endif
 
+
+
                                     @if($leadAdditionalInfo)
+
+
 
                                 <div class="p-3 fs-5" style="font-weight: 600">Additional Information</div>
                                     <div class="col-xxl-6 col-xl-6">
