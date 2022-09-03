@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-5 col-md-12 mt-4">
+                            <div class="col-xxl-5 col-md-12 mt-4 mx-xl-5">
 
                                 <div class="text-muted ">Start Date: 25/04/2</div>
                                 <div class="text-muted my-2">Due Date: 25/04/22</div>

@@ -18,7 +18,7 @@
                 <div class="container-fluid bg-white">
 
                     {{--                   2nd arrow--}}
-                    <a href="/projects" class="bi bi-arrow-left fs-2 text-black d-md-none d-lg-none d-xl-block"></a>
+                    <a href="#" class="bi bi-arrow-left fs-2 text-black d-md-none d-lg-none d-xl-block"></a>
 
 
                     <div class="row " >
@@ -54,7 +54,7 @@
                                         @endforeach
 
                                     </div>
-                                    <div class="row row-cols-2">
+                                    <div class="row row-cols-2" >
                                         <div class="col-2 text-muted text-start">Progress: </div>
                                         <div class="col-3" >
                                             <div class="progress text-center mt-2 rounded-0" style="height: 5px">
@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-5 col-md-12 mt-4">
+                            <div class="col-xxl-5 col-md-12 mt-4 mx-md-5" >
 
                                 <div class="text-muted ">Start Date: {{$project->start_date}}</div>
                                 <div class="text-muted my-2">Due Date: {{$project->due_date}}</div>
@@ -121,7 +121,7 @@
                                     <div class="row mt-4">
                                         <div class="col-12">
                                             <div class="container-fluid">
-                                                <div class="row g-4 ">
+                                                <div class="row g-4 " >
                                                     <div class="col-xxl-6 col-md-12 col-xl-6">
                                                         <div class="p-3 border bg-white">
                                                             <div class="row font-style-page">
@@ -173,14 +173,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xxl-6 col-md-12 col-xl-12">
-                                                        <div class="p-3 border bg-white">
-                                                            <div class="row font-style-page">
-                                                                <div class="col-4 my-1 text-muted fs-6">
+                                                    <div class="col-xxl-6 col-md-12 col-xl-6">
+                                                        <div class="p-3 border bg-white" >
+                                                            <div class="row font-style-page justify-content-start" >
+                                                                <div class="col-xxl-4 col-xl-3 my-1 text-muted fs-6">
                                                                     Progress :
                                                                 </div>
-                                                                <div class="col-8">
-                                                                    <div class="progress mx-2 text-center my-2 rounded-0" style="width: 20rem; height: 1rem; border-radius: 5px !important;">
+                                                                <div class="col-xxl-8 col-xl-7 ">
+                                                                    <div class="progress mx-2 mx-xl-0 text-center my-2 rounded-0" style="width: 20rem; height: 1rem; border-radius: 5px !important;">
                                                                         <div class="progress-bar bg-success" role="progressbar"
                                                                              style="width: 10%" aria-valuenow="15" aria-valuemin="0"
                                                                              aria-valuemax="100"></div>
@@ -191,7 +191,7 @@
                                                                              style="width: 10%" aria-valuenow="15" aria-valuemin="0"
                                                                              aria-valuemax="100"></div>
                                                                         <div class="progress-bar bg-secondary" role="progressbar"
-                                                                             style="width: 70%" aria-valuenow="15" aria-valuemin="0"
+                                                                             style="width: 50%" aria-valuenow="15" aria-valuemin="0"
                                                                              aria-valuemax="100"></div>
                                                                     </div>
                                                                 </div>
@@ -227,25 +227,19 @@
                                             <div class="col-12">
 
                                                 <div class="container mx-1">
+
                                                     <div class="row mt-5">
+                                                        @foreach($project->teams as $team)
                                                         <div class="col-12 text-muted">
                                                             <div class="row">
-                                                                <div class="col-2">Details for team 1 : </div>
-                                                                <div class="col-10">
-                                                                    Microsoft Teams is all about collaborating with coworkers and team members as efficiently as possible. A large part of that is, of course, chatting with others within the app. While messaging technologies aren’t anything new, there are some handy nuances and features worth knowing about in Microsoft Teams Chat and Channels.
+                                                                <div class="col-xxl-2 col-md-3">Details for teams </div>
+                                                                <div class="col-xxl-10 col-md-9">
+                                                                   {{$team->description}}
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 mt-5 text-muted">
-                                                            <div class="row">
-                                                                <div class="col-2">Details for team 1 : </div>
-                                                                <div class="col-10">
+                                                        @endforeach
 
-                                                                    Microsoft Teams is all about collaborating with coworkers and team members as efficiently as possible. A large part of that is, of course, chatting with others within the app. While messaging technologies aren’t anything new, there are some handy nuances and features worth knowing about in Microsoft Teams Chat and Channels.
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
 

@@ -31,8 +31,6 @@ Route::get('/', function () {
 })->name("dashboard");
 
 
-
-
 Route::controller(ProjectController::class)->group(function()
 {
     Route::get('/projects','index')->name("project.list");

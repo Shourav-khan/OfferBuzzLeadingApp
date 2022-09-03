@@ -28,14 +28,15 @@
 
                                     </div>
 
-                                    <div class="my-1">Team Target:
+                                    <div class="my-1">
+                                        Team Target:
 
                                         @foreach($project->projectTargets as $target)
                                             {{$target->title}}
                                         @endforeach
 
                                     </div>
-                                    <div class="row row-cols-2">
+                                    <div class="row row-cols-2" >
                                         <div class="col-2 text-muted text-start">Progress: </div>
                                         <div class="col-3">
                                             <div class="progress text-center mt-2 rounded-0" style="height: 5px">
@@ -68,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-5 col-md-12 mt-4">
+                            <div class="col-xxl-5 col-md-12 mt-4 mx-xl-5">
 
                                 <div class="text-muted ">Start Date: {{$project->start_date}}</div>
                                 <div class="text-muted my-2">Due Date: {{$project->due_date}}</div>

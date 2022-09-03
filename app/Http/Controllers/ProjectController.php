@@ -82,6 +82,8 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
 
+//        $teams = (new TeamController())->getAllTeam();
+
         return view('pages.project-page.overView', compact(['project']));
     }
 
