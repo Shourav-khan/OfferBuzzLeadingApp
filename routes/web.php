@@ -75,7 +75,9 @@ Route::controller(TeamController::class)->prefix('teams')->name('team.')->group(
 
 Route::get('/project/lead/details',[LeadController::class,'index'])->name("project.lead.detail");
 Route::get('/project/leads/view',[Projects::class,'projectLeadView'])->name("project.lead.view");
+
 Route::get('/project/leads/create',[LeadController::class,'create'])->name("project.lead.create");
+
 Route::get('/project/lead/{lead?}/details',[LeadController::class,'show'])->name("project.employee.detail");
 
 Route::get('/project/team/members/view',[Projects::class,'teamMembersView'])->name("project.team.member.detail");
