@@ -1,6 +1,6 @@
 <div>
     <form wire:submit.prevent="lead" action="#" method="POST"  class="row g-3 container-fluid" >
-        @csrf
+
 
 
        @if($currentStep == 1)
@@ -12,13 +12,13 @@
             <span class="text-danger">@error('company_name'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
-            <label for="inputEmail4" class="form-label text-muted fs-6 " wire:model="owner_name" style="letter-spacing: -1px;font-weight: 500">Owner Name</label>
-            <input type="text" name="owner_name" class="form-control border rounded-0 p-3" id="inputEmail4" placeholder="Write the Name">
+            <label for="inputEmail4" class="form-label text-muted fs-6 "  style="letter-spacing: -1px;font-weight: 500">Owner Name</label>
+            <input type="text" name="owner_name" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="owner_name" placeholder="Write the Name">
             <span class="text-danger">@error('owner_name'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
-            <label for="inputEmail4" class="form-label text-muted fs-6 " wire:model="contact_person" style="letter-spacing: -1px;font-weight: 500">Contact Person</label>
-            <input type="text" name="contact_person" class="form-control border rounded-0 p-3" id="inputEmail4" placeholder="Write the Name">
+            <label for="inputEmail4" class="form-label text-muted fs-6 "  style="letter-spacing: -1px;font-weight: 500">Contact Person</label>
+            <input type="text" name="contact_person" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="contact_person" placeholder="Write the Name">
             <span class="text-danger">@error('contact_person'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
@@ -134,6 +134,10 @@
 
                 @if($currentStep == 2)
                     <button type="button" class="btn text-white border rounded-0" wire:click="decreaseValue()" style="width: 10rem;background-color: #CB0E00">back</button>
+
+                @endif
+
+            @if($currentStep == 2)
                     <button type="submit" class="btn text-white border rounded-0" style="width: 10rem;background-color: #CB0E00">Save</button>
                 @endif
 

@@ -72,7 +72,7 @@ public function mount(){
     }
 
     public function validateData(){
-    if($this->currentStep ==1)
+    if($this->currentStep == 1)
     {
 
         $this->validate([
@@ -105,4 +105,29 @@ public function mount(){
     }
 
     }
+
+    public function lead(){
+
+
+    $value1 = array(
+
+        'company_name'=>$this->company_name,
+        'owner_name'=>$this->owner_name,
+        'contact_person'=>$this->contact_person,
+        'state'=>$this->state,
+        'email'=>$this->email1,
+        'phone'=>$this->phone1,
+        'address'=>$this->address1,
+        'source_by'=>$this->source_by
+
+    );
+
+    $leads = Lead::insert($value1);
+     $this->reset();
+     $this->currentStep=1;
+     dd($leads);
+
+    }
+
+
 }
