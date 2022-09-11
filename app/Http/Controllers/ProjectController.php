@@ -28,14 +28,14 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function create()
+    public function create (Project $project)
     {
 
         $territories = (new TerritoryController())->territoryAll();
         $teams = (new TeamController())->getAllTeam();
         $users = (new UserDetailController())->getAllUsers();
         $projectTargets = (new ProjectTargetController())->getAllProjectTarget();
-        return view('pages.project-page.projectCreate',compact(['territories','teams','users','projectTargets']));
+        return view('pages.project-page.projectCreate',compact(['territories','teams','users','projectTargets','project']));
     }
 
     /**

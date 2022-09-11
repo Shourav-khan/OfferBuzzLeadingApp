@@ -85,5 +85,10 @@ class CompanyController extends Controller
 
     }
 
+    public function getAllCompanies()
+    {
+        return Company::all();
+    }
+
 
 }

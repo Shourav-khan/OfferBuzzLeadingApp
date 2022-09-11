@@ -54,7 +54,45 @@
                                         <option  value="{{ $territory->id }}">{{ $territory->title }}</option>
                                     @endforeach
 
+{{--                                    @php--}}
 
+{{--                                    $tests = array();--}}
+{{--                                    $check = false;--}}
+
+{{--                                    @endphp--}}
+
+{{--                                    @if($project->territories)--}}
+{{--                                        @foreach($territories as $territory)--}}
+{{--                                            @foreach($project->territories as $projectTerritory)--}}
+
+{{--                                                @if($territory->id == $projectTerritory->id)--}}
+{{--                                                    <option  value="{{ $territory->id }}" selected="selected">{{ $territory->title }}</option>--}}
+{{--                                                    @php--}}
+{{--                                                    $check = false;--}}
+{{--                                                    @endphp--}}
+{{--                                                    @break--}}
+
+{{--                                                @else--}}
+{{--                                                    @php--}}
+{{--                                                        $check = true;--}}
+{{--                                                    @endphp--}}
+
+{{--                                                @endif--}}
+
+{{--                                            @endforeach--}}
+
+{{--                                            @if($check)--}}
+{{--                                                    <option  value="{{ $territory->id }}" selected="selected">{{ $territory->title }}</option>--}}
+{{--                                                @endif--}}
+{{--                                        @endforeach--}}
+
+{{--                                    @else--}}
+
+{{--                                        @foreach($territories as $territory)--}}
+{{--                                            <option  value="{{ $territory->id }}" selected="selected">{{ $territory->title }}</option>--}}
+{{--                                        @endforeach--}}
+
+{{--                                    @endif--}}
 
 
                                 </select>

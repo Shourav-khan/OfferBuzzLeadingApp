@@ -127,4 +127,9 @@ class LeadController extends Controller
         ]);
 
     }
+
+    public function getAllLeads()
+    {
+        return Lead::all();
+    }
 }

@@ -2,6 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\LeadController;
+use App\Models\User;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Lead;
@@ -42,7 +45,11 @@ public function mount(){
 
     public function render()
     {
-        return view('livewire.lead-multi-form');
+
+        $companies = (new CompanyController())->getAllCompanies();
+            $leads = (new LeadController())->getAllLeads();
+            $users = User::all();
+        return view('livewire.lead-multi-form',compact(['companies','leads','users']));
     }
 
     public function increaseValue()

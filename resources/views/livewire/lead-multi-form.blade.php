@@ -8,17 +8,43 @@
         <div class="p-3 fs-5" style="font-weight: 600">Lead Information</div>
         <div class="col-xxl-6 col-md-12 col-xl-6">
             <label for="inputEmail4" class="form-label text-muted fs-6 " style="letter-spacing: -1px;font-weight: 500">Company Name</label>
-            <input type="text" name="company_name" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="company_name" placeholder="Write the Name">
+
+            <select class="form-select"  name="company_name[]" multiple="multiple" wire:model="company_name" aria-label="Default select example">
+
+                @foreach($companies as $company)
+                    <option value="{{ $company->id }}">{{ $company->company_name }}</option>
+                @endforeach
+
+            </select>
+{{--            <input type="text" name="company_name[]" class="form-control border rounded-0 p-3"  id="inputEmail4" wire:model="company_name" placeholder="Write the Name">--}}
             <span class="text-danger">@error('company_name'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
             <label for="inputEmail4" class="form-label text-muted fs-6 "  style="letter-spacing: -1px;font-weight: 500">Owner Name</label>
-            <input type="text" name="owner_name" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="owner_name" placeholder="Write the Name">
+
+            <select class="form-select"  name="owner_name[]" multiple="multiple" wire:model="owner_name" aria-label="Default select example">
+
+                @foreach($companies as $company)
+                    <option value="{{ $company->id }}">{{ $company->owner_name }}</option>
+                @endforeach
+
+            </select>
+
+{{--            <input type="text" name="owner_name" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="owner_name" placeholder="Write the Name">--}}
             <span class="text-danger">@error('owner_name'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
             <label for="inputEmail4" class="form-label text-muted fs-6 "  style="letter-spacing: -1px;font-weight: 500">Contact Person</label>
-            <input type="text" name="contact_person" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="contact_person" placeholder="Write the Name">
+
+            <select class="form-select"  name="contact_person[]" multiple="multiple" wire:model="contact_person" aria-label="Default select example">
+
+                @foreach($leads as $lead)
+                    <option value="{{ $lead->id }}">{{ $lead->contact_person }}</option>
+                @endforeach
+
+            </select>
+
+{{--            <input type="text" name="contact_person" class="form-control border rounded-0 p-3" id="inputEmail4" wire:model="contact_person" placeholder="Write the Name">--}}
             <span class="text-danger">@error('contact_person'){{$message}}@enderror</span>
         </div>
         <div class="col-xxl-6 col-xl-6">
@@ -50,9 +76,13 @@
         </div>
         <div class="col-xxl-6 col-xl-6">
             <label for="inputState" class="form-label fs-6 text-muted" style="letter-spacing: -1px;font-weight: 500">Lead By</label>
-            <select class="form-select " wire:model="lead_by" multiple="multiple" name="lead_id[]" aria-label="Default select example">
+            <select class="form-select " wire:model="lead_by" multiple="multiple" name="lead_by[]" aria-label="Default select example">
 
-                <option value="1">One</option>
+                @foreach($users as $user)
+                <option value="{{$user->id}}">{{$user->name}}</option>
+                @endforeach
+
+
 {{--                @foreach($users as $people)--}}
 {{--                    <option  value="{{ $people->id }}">{{ $people->name }}</option>--}}
 {{--                @endforeach--}}
